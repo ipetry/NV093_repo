@@ -16,7 +16,7 @@ from os.path import join, abspath
 
 
 
-data_path = join('..', 'nv2022-08-18.xlsx')
+data_path = join('..', 'nv2024-07-31.xlsx')
 data_path = abspath(data_path)
 
 
@@ -100,14 +100,14 @@ for fio in mandata:
     for i in range(1, 29):
         zagl = ws.cell(row=1, column=i)
         zagl.alignment = Alignment(horizontal='center')
-        zagl.fill = PatternFill(fill_type='solid', start_color='5a61f0', end_color='5a61f0')
-        zagl.font = Font(bold=True, italic=False, color='ffffff', size=10)
+       # zagl.fill = PatternFill(fill_type='solid', start_color='5a61f0', end_color='5a61f0')
+        zagl.font = Font(bold=True, italic=False, color='000000', size=10)
 
 
 
 
 
-    nmrow = len(mandata[fio])
+    '''nmrow = len(mandata[fio])
     for i in range(2, nmrow + 2):
         ws.cell(row=i, column=1).number_format = '##0'
         ws.cell(row=i, column=1).fill = PatternFill(
@@ -123,14 +123,14 @@ for fio in mandata:
         ws.cell(row=i, column=4).fill = PatternFill(
             fill_type='solid', start_color='F5FFC3', end_color='F5FFC3')
 
-        ws.cell(row=i, column=5).fill = PatternFill(
-            fill_type='solid', start_color='E9FFE6', end_color='E9FFE6')
+       # ws.cell(row=i, column=5).fill = PatternFill(
+      #      fill_type='solid', start_color='000000', end_color='000000')
 
         ws.cell(row=i, column=6).fill = PatternFill(
             fill_type='solid', start_color='F5FFC3', end_color='F5FFC3')
 
-        ws.cell(row=i, column=7).fill = PatternFill(
-            fill_type='solid', start_color='E9FFE6', end_color='E9FFE6')
+     #   ws.cell(row=i, column=7).fill = PatternFill(
+     #       fill_type='solid', start_color='E9FFE6', end_color='E9FFE6')
 
         ws.cell(row=i, column=8).fill = PatternFill(
             fill_type='solid', start_color='F5FFC3', end_color='F5FFC3')
@@ -194,15 +194,16 @@ for fio in mandata:
 
         ws.cell(row=i, column=28).fill = PatternFill(
             fill_type='solid', start_color='F5FFC3', end_color='F5FFC3')
+            '''
 
     ws.column_dimensions['A'].width = 4
     ws.column_dimensions['B'].width = 10
-    ws.column_dimensions['C'].width = 8
-    ws.column_dimensions['D'].width = 22
-    ws.column_dimensions['E'].width = 15
-    ws.column_dimensions['F'].width = 18
-    ws.column_dimensions['G'].width = 12
-    ws.column_dimensions['H'].width = 20
+    ws.column_dimensions['C'].width = 2
+    ws.column_dimensions['D'].width = 30
+    ws.column_dimensions['E'].width = 18
+    ws.column_dimensions['F'].width = 5
+    ws.column_dimensions['G'].width = 33
+    ws.column_dimensions['H'].width = 18
     ws.column_dimensions['I'].width = 10
     ws.column_dimensions['J'].width = 12
     ws.column_dimensions['K'].width = 9
@@ -216,13 +217,13 @@ for fio in mandata:
     ws.column_dimensions['S'].width = 20
     ws.column_dimensions['T'].width = 20
     ws.column_dimensions['U'].width = 18
-    ws.column_dimensions['V'].width = 20
+    ws.column_dimensions['V'].width = 24
     ws.column_dimensions['W'].width = 10
     ws.column_dimensions['X'].width = 17
     ws.column_dimensions['Y'].width = 6
     ws.column_dimensions['Z'].width = 10
     ws.column_dimensions['AA'].width = 5
-    ws.column_dimensions["AB"].width = 20
+    ws.column_dimensions["AB"].width = 12
 
     exfilename = join('.', 'DataNV', (exname + '.xlsx'))
     exfilename = abspath(exfilename)
