@@ -14,8 +14,6 @@ from openpyxl.styles import Alignment, PatternFill, Font
 from os.path import join, abspath
 
 
-
-
 data_path = join('..', 'nv2024-07-31.xlsx')
 data_path = abspath(data_path)
 
